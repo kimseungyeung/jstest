@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>KSY PAGE</title>
+
+<script type="text/javascript" src="module.js"></script>
+
+<style>
+li.menu {
+	
+}
+
+.menulist>li {
+	
+}
+
+.menu {
+	float: left;
+	margin: 0px 1px 0px 0px;
+	cursor: pointer;
+	text-decoration: none;
+	display: block;
+	text-align: center;
+	background: #ededed;
+	width: 12%;
+	height: 20%;
+}
+
+.menu .hide {
+	display: none;
+	background-color: #c6c6c6;
+	table-layout: auto;
+	position: relative;
+	z-index: 1;
+	
+}
+
+.menu.hide>li {
+	position: relative;
+}
+
+.lmenu {
+	background: #D4F4FA;
+	cursor: pointer;
+	width: 12%;
+	position: fixed;
+	margin-bottom: 10px;
+	height: 80%;
+	
+}
+
+.lmenu>li {
+	background: #ffffff;
+	text-align: center;
+	display: table;
+	width: 12%;
+	margin-top: 10px;
+}
+
+.menu .hide>li {
+	text-align: center;
+	display: inline-block;
+}
+
+</style>
+<div style="text-align: center">
+	<span id="nowtimestring">현재시간<br></span> <span id="nowtime">00
+		: 00 : 00</span>
+</div>
+</head>
+<body>
+
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+
+	<section id="page1" data-role="page">
+		<div style="text-align: center">
+			<header data-role="header">
+				<h1>KSY BLOG</h1>
+			</header>
+		</div>
+
+		<div style="text-align: center">
+			<h3>가나다 List</h3>
+		</div>
+
+		<ul class="menulist" data-role="listview" data-filter="true"
+			data-autodividers="true" style="list-style-type: none;">
+
+			<li class="menu" onclick="doDisplay(0)"><a>menu1</a>
+				<ul class="hide" style="list-style-type: none">
+
+					<li><a>menu1-sub1</a></li>
+					<li><a>menu1-sub2</a></li>
+				</ul></li>
+			<li class="menu" text><a onclick="doDisplay(1);">menu2</a><br>
+				<ul class="hide" style="list-style-type: none">
+					<li><a>menu2-sub1</a></li>
+					<li><a>menu2-sub2</a></li>
+				</ul></li>
+			<li class="menu"><a href="http://www.naver.com">menu3</a></li>
+			<li class="menu"><a href="#">menu4</a></li>
+			<li class="menu"><a href="http://www.daum.net">menu5</a></li>
+			<li class="menu" data-role="list-divider">menu6</li>
+			<li class="menu"><a href="">menu7</a></li>
+			<li class="menu"><a href="#">menu8</a></li>
+
+		</ul>
+		<br> <br> <br>
+		<div>
+			<ul class="lmenu" style="list-style-type: none">
+				<li>lmenu1</li>
+				<li>lmenu2</li>
+				<li>lmenu3</li>
+				<li>lmenu4</li>
+				<li>lmenu5</li>
+			</ul>
+		</div>
+		<div class="footer" style="text-align: center">
+			<footer data-role="footer">
+				<h1>
+					<br> <br> <br>dehien
+				</h1>
+			</footer>
+		</div>
+	</section>
+</html>
