@@ -1,5 +1,5 @@
 {
-  "ecmaVersion": 5,
+  "ecmaVersion": 6,
   "plugins": {
     "guess-types": {
       
@@ -10,10 +10,16 @@
     "doc_comment": {
       
     },
+    "node": {
+      
+    },
     "browser-extension": {
       
     },
     "ckeditor4.4.x": {
+      
+    },
+    "cordovajs": {
       
     },
     "jquery-extension": {
@@ -22,6 +28,7 @@
   },
   "libs": [
     "ecma5",
+    "ecma6",
     "browser",
     "jquery"
   ]

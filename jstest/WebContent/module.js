@@ -1,12 +1,20 @@
 
 	var dd = setInterval("nowtime()", 1000);
+	
+	jQuery( window ).resize(function() {
+		var widhth =document.body.clientWidth;
+		var height =document.body.clientHeight;
+		document.getElementById("nowtimestring").innerHTML = "변형" + "<br>";  
+		//창크기 변화 감지
+		});
+
 	function nowtime() {
 		var today = new Date();
 
 		var hourNow = today.getHours();
 		var minNow = today.getMinutes();
 		var secondNow = today.getSeconds();
-		var greeting;
+		
 
 		
 		document.getElementById("nowtime").innerHTML = hourNow.toString()
