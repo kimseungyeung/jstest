@@ -56,6 +56,13 @@
 		
 	}
 	
+	function view(){
+		var dd =document.getElementById("input");
+		var ff= dd.value;
+		var value = $('#input').val();
+		alert(ff);
+		
+	}
 	
 	
 
