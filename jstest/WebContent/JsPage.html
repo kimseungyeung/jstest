@@ -8,37 +8,38 @@
 <script type="text/javascript" src="module.js"></script>
 
 <style>
-li.menu {
-	
+.menulist {
+	margin: -4px
 }
 
-.menulist>li {
-	
+ul {
+	margin: 0;
+	padding: 0;
 }
 
 .menu {
 	float: left;
-	margin: 0px 1px 0px 0px;
 	cursor: pointer;
 	text-decoration: none;
-	display: block;
+	/* 	display: inline-block; */
 	text-align: center;
-	background: #ededed;
-	width: 12%;
+	background-color: #ededed;
+	width: 12.5%;
 	height: 20%;
+	padding: 0;
+	margin: 0;
+	display: block;
+	position: relative;
+	z-index: 2;
 }
 
 .menu .hide {
 	display: none;
 	background-color: #c6c6c6;
-	table-layout: auto;
-	position: relative;
-	z-index: 1;
-	
-}
-
-.menu.hide>li {
-	position: relative;
+	text-align: center;
+	z-index: 2;
+	margin: 0;
+	padding: 0;
 }
 
 .lmenu {
@@ -46,24 +47,42 @@ li.menu {
 	cursor: pointer;
 	width: 12%;
 	position: fixed;
-	margin-bottom: 10px;
 	height: 80%;
-	
+	padding: 0;
+	margin: 0;
+	z-index: 1
 }
 
 .lmenu>li {
 	background: #ffffff;
 	text-align: center;
-	display: table;
-	width: 12%;
+	/* 	display: table; */
+	
 	margin-top: 10px;
 }
 
-.menu .hide>li {
-	text-align: center;
-	display: inline-block;
+table, th, td {
+	border: 1px solid #bcbcbc;
 }
 
+table {
+	width: 80%;
+}
+
+.page {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	margin-left: 6%;
+	position: fixed;
+	z-index: 1
+}
+
+.footer {
+height: 100%;
+position: relative;	
+}
 </style>
 
 <div style="text-align: center">
@@ -76,55 +95,196 @@ li.menu {
 	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
 
 
-	<section id="page1" data-role="page">
-		<div style="text-align: center">
-			<header data-role="header">
-				<h1>KSY BLOG</h1>
-			</header>
-		</div>
 
-		<div style="text-align: center">
-			<h3>가나다 List</h3>
-		</div>
+	<div style="text-align: center">
+		<header data-role="header">
+			<h1>KSY BLOG</h1>
+		</header>
+	</div>
 
-		<ul class="menulist" data-role="listview" data-filter="true"
-			data-autodividers="true" style="list-style-type: none;">
+	<div style="text-align: center">
+		<h3>가나다 List</h3>
+	</div>
 
-			<li class="menu" onclick="doDisplay(0)"><a>menu1</a>
-				<ul class="hide" style="list-style-type: none">
+	<ul class="menulist" style="list-style-type: none;">
 
-					<li><a>menu1-sub1</a></li>
-					<li><a>menu1-sub2</a></li>
-				</ul></li>
-			<li class="menu" text><a onclick="doDisplay(1);">menu2</a><br>
-				<ul class="hide" style="list-style-type: none">
-					<li><a>menu2-sub1</a></li>
-					<li><a>menu2-sub2</a></li>
-				</ul></li>
-			<li class="menu"><a href="http://www.naver.com">menu3</a></li>
-			<li class="menu"><a href="#">menu4</a></li>
-			<li class="menu"><a href="http://www.daum.net">menu5</a></li>
-			<li class="menu" data-role="list-divider">menu6</li>
-			<li class="menu"><a href="">menu7</a></li>
-			<li class="menu"><a href="#">menu8</a></li>
+		<li class="menu" onclick="doDisplay(0)"><a>menu1</a>
+			<ul class="hide" style="list-style-type: none">
 
+				<li><a>menu1-sub1</a></li>
+				<li><a>menu1-sub2</a></li>
+				<li><a>menu1-sub3</a></li>
+				<li><a>menu1-sub4</a></li>
+				<li><a>menu1-sub5</a></li>
+				<li><a>menu1-sub6</a></li>
+
+			</ul></li>
+		<li class="menu" onclick="doDisplay(1)"><a>menu2</a><br>
+			<ul class="hide" style="list-style-type: none">
+				<li><a>menu2-sub1</a></li>
+				<li><a>menu2-sub2</a></li>
+				<li><a>menu2-sub3</a></li>
+				<li><a>menu2-sub4</a></li>
+				<li><a>menu2-sub5</a></li>
+				<li><a>menu2-sub6</a></li>
+			</ul></li>
+		<li class="menu"><a href="http://www.naver.com">menu3</a></li>
+		<li class="menu"><a href="#">menu4</a></li>
+		<li class="menu"><a href="http://www.daum.net">menu5</a></li>
+		<li class="menu">menu6</li>
+		<li class="menu"><a href="">menu7</a></li>
+		<li class="menu"><a href="#">menu8</a></li>
+
+	</ul>
+	<br>
+	<br>
+	<br>
+	<div>
+		<ul class="lmenu" style="list-style-type: none">
+			<li onclick="pageset(0)"><a href="#">page1</a></li>
+			<li onclick="pageset(1)"><a>page2</a></li>
+			<li onclick="pageset(2)"><a>page3</a></li>
+			<li><a>lmenu4</a></li>
+			<li><a>lmenu5</a></li>
 		</ul>
-		<br> <br> <br>
-		<div>
-			<ul class="lmenu" style="list-style-type: none">
-				<li>lmenu1</li>
-				<li>lmenu2</li>
-				<li>lmenu3</li>
-				<li>lmenu4</li>
-				<li>lmenu5</li>
-			</ul>
-		</div>
-		<div class="footer" style="text-align: center">
-			<footer data-role="footer">
-				<h1>
-					<br> <br> <br>dehien
-				</h1>
-			</footer>
-		</div>
+	</div>
+	<section class="page" style="display: block">
+		<table style="margin-left: auto; margin-right: auto;">
+
+			<!-- <caption>page1</caption> -->
+			<thead>
+				<tr>
+					<th>이름</th>
+					<td>성별</th>
+					<td>나이</th>
+					<td>국적</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>김승영</th>
+					<td>남자</td>
+					<td>29</td>
+					<td >대한민국</td>
+				</tr>
+				<tr>
+					<td>신승연</td>
+					<td>여자</td>
+					<td>27</td>
+					<td >대한민국</td>
+				</tr>
+				<tr>
+					<td>Teddy</th>
+					<td>남자</td>
+					<td>25</td>
+					<td>미국</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2">Table Foot</td>
+					<td>dd</td>
+
+				<td ><input type="text" name="text" id="input" size="20"></input></body>
+				</tr>
+				
+			</tfoot>
+		</table>
 	</section>
+		<section class="page" style="display: none;">
+		<table style="margin-left: auto; margin-right: auto;">
+
+			<!-- <caption>page1</caption> -->
+			<thead>
+				<tr>
+					<th>품목</th>
+					<td>제조일</th>
+					<td>종류</th>
+					<td>제조사</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>아이폰x10</th>
+					<td>18-10-11</td>
+					<td>핸드폰</td>
+					<td >애플</td>
+				</tr>
+				<tr>
+					<td>갤럭시s10</td>
+					<td>19-04-01</td>
+					<td>핸드폰</td>
+					<td >삼성</td>
+				</tr>
+				<tr>
+					<td>플레이스테이션4</th>
+					<td>18-04-04</td>
+					<td>콘솔게임기</td>
+					<td>소니</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2">Table Foot</td>
+					<td>dd</td>
+
+				<td><input type="text" name="text" size="20"></td>
+				</tr>
+				
+			</tfoot>
+		</table>
+	</section>
+	<section class="page" style="display: none;">
+		<table style="margin-left: auto; margin-right: auto;">
+
+			<!-- <caption>page1</caption> -->
+			<thead>
+				<tr>
+					<th>사명</th>
+					<td>설립일</th>
+					<td>분류</th>
+					<td>국적</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>애플</th>
+					<td>00-01-04</td>
+					<td>IT</td>
+					<td >미국</td>
+				</tr>
+				<tr>
+					<td>소니</td>
+					<td>01-01-03</td>
+					<td>IT.게임</td>
+					<td >일본</td>
+				</tr>
+				<tr>
+					<td>삼성전자</th>
+					<td>01-01-05</td>
+					<td>IT</td>
+					<td>대한민국</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="2">Table Foot</td>
+					<td>dd</td>
+
+				<td><input type="text" name="text" size="20"></td>
+				</tr>
+				
+			</tfoot>
+		</table>
+	</section>
+	<div class="footer" style="text-align: center">
+		<br>
+		<br>
+		<br>
+		<footer data-role="footer">
+			<h1>
+				<br> <br> <br>dehien
+			</h1>
+		</footer>
+	</div>
 </html>
