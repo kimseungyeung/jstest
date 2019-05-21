@@ -42,15 +42,30 @@
 			
 		}
 	}
+	function dolDisplay(num) {
+		var con2= document.getElementsByClassName("lhide");
+
+		if (con2[num].style.display == 'none') {
+			con2[num].style.display = 'block';
+			for(var i=0; i<7; i++){
+				if(i!=num){
+				con2[i].style.display = 'none';
+				}
+			}
+		} else {
+			con2[num].style.display = 'none';
+			
+		}
+	}
 	function pageset(num) {
 		var number=(num+1).toString();
 		alert("페이지"+number);
-			var con2 = document.getElementsByClassName("page");
+			var con3 = document.getElementsByClassName("page");
 				
-				con2[num].style.display = 'block';
+				con3[num].style.display = 'block';
 				for(var i=0; i<7; i++){
 					if(i!=num){
-					con2[i].style.display = 'none';
+					con3[i].style.display = 'none';
 					}
 				}
 		
@@ -62,7 +77,13 @@
 		var value = $('#input').val();
 		alert(ff);
 		
+		
 	}
-	
+	function dropdownview(){
+		var skillsSelect = document.getElementById("newSkill");
+		var selectedText = skillsSelect.options[skillsSelect.selectedIndex].text;
+		alert(selectedText);
+		
+	}
 	
 
