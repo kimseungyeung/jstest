@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<html>
+<html >
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=640, user-scalable=yes">
 <title>KSY PAGE</title>
 
 <script type="text/javascript" src="module.js"></script>
 
 <style>
+head{
+}
 body {
 	margin: 0;
 	padding: 0;
@@ -37,7 +40,7 @@ ul {
 	padding:0;
 	display: block;
 	position: relative;
-	z-index: 2;
+	z-index: 3;
 }
 .menu:hover{
 background-color: #c6c6c6
@@ -57,12 +60,14 @@ background-color: #c6c6c6
 	background: #D4F4FA;
 	cursor: pointer;
 	width: 12%;
+	float:left;
 	position: absolute;
 	height: 100%;
 	padding: 0;
 	margin: 0;
 	text-align:center;
-	z-index: 1
+	z-index: 2;
+	 justify-content: space-between;
 }
 .lmenu>li:hover{
 background-color: #00D8FF;
@@ -70,20 +75,20 @@ background-color: #00D8FF;
 .lmenu>li {
 	background: #ffffff;
 	text-align: center;
-	margin-top: 10px;
+	margin-top: 10%;
+	width:100%;
 	padding :0;
-	word-spacing: normal;
-	height:5%;
 }
 .lmenu .lhide{
 display: none;
 position: absolute;
-float:none;
 text-align:center;
 background-color: #00D8FF;
-margin-top:5px;
-padding:0;
-
+width: 90%;
+margin-left:100%;
+margin-top:-10%;
+float:right;
+z-index: 3;
 
 
 }
@@ -196,23 +201,23 @@ table {
 				<li onclick="dolDisplay(0)"><a>lmenu4</a>
 				<ul class="lhide" style="list-style-type: none">
 
-					<li><a>menu1-sub1</a></li>
-					<li><a>menu1-sub2</a></li>
-					<li><a>menu1-sub3</a></li>
-					<li><a>menu1-sub4</a></li>
-					<li><a>menu1-sub5</a></li>
-					<li><a>menu1-sub6</a></li>
+					<li ><a>menu1-sub1</a></li>
+					<li style="margin-top: 5px"><a>menu1-sub2</a></li>
+					<li style="margin-top: 5px"><a>menu1-sub3</a></li>
+					<li style="margin-top: 5px"><a>menu1-sub4</a></li>
+					<li style="margin-top: 5px"><a>menu1-sub5</a></li>
+					<li style="margin-top: 5px"><a>menu1-sub6</a></li>
 
 				</ul></li>
 				<li onclick="dolDisplay(1)"><a>lmenu5</a>
 				<ul class="lhide" style="list-style-type: none">
 
-					<li><a>menu2-sub1</a></li>
-					<li><a>menu2-sub2</a></li>
-					<li><a>menu2-sub3</a></li>
-					<li><a>menu2-sub4</a></li>
-					<li><a>menu2-sub5</a></li>
-					<li><a>menu2-sub6</a></li>
+					<li ><a>menu2-sub1</a></li>
+					<li style="margin-top: 5px"><a>menu2-sub2</a></li>
+					<li style="margin-top: 5px"><a>menu2-sub3</a></li>
+					<li style="margin-top: 5px"><a>menu2-sub4</a></li>
+					<li style="margin-top: 5px"><a>menu2-sub5</a></li>
+					<li style="margin-top: 5px"><a>menu2-sub6</a></li>
 
 				</ul></li>
 				<li><a>lmenu6</a></li>
