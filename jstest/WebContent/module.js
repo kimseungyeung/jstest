@@ -1,5 +1,5 @@
 
-	var dd = setInterval("nowtime()", 1000);
+var dd = setInterval("nowtime()", 1000);
 /*	var mql = window.matchMedia("screen and (max-width: 768px)");
 
 	mql.addListener(function(e) {
@@ -11,16 +11,8 @@
 	    }
 	});*/
 	$( window ).resize(function() {
-		document.getElementById("nowtimestring").innerHTML = "변형" + "<br>"; 
-		//창크기 변화 감지
-		window.onfocus=function(){
-		}
-		window.onload=function(){
-		 window.focus(); // 현재 window 즉 익스플러러를 윈도우 최상단에 위치
-		window.moveTo(0,0); // 웹 페이지의 창 위치를 0,0 (왼쪽 최상단) 으로 고정
-		window.resizeTo(1280,800); // 웹페이지의 크기를 가로 1280 , 세로 800 으로 고정(확장 및 축소)
-		window.scrollTo(0,250); // 페이지 상단 광고를 바로 볼 수 있게 스크롤 위치를 조정
-		}
+		document.getElementById("nowtimestring").innerHTML = "변형"; 
+	
 		});
 	
 	function nowtime() {
@@ -63,7 +55,7 @@
 		var con2= document.getElementsByClassName("lhide");
 
 		if (con2[num].style.display == 'none') {
-			con2[num].style.display = 'block';
+			con2[num].style.display = 'table';
 			for(var i=0; i<7; i++){
 				if(i!=num){
 				con2[i].style.display = 'none';

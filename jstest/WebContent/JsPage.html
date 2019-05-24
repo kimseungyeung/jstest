@@ -1,151 +1,18 @@
 <!DOCTYPE html>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-<html >
+<html>
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=640, user-scalable=yes">
 <title>KSY PAGE</title>
 
+ <link rel="stylesheet" type="text/css" href="module.css"/> 
+<!-- <link rel="stylesheet/less" type="text/css" href="styles.less" /> -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" />
 <script type="text/javascript" src="module.js"></script>
-
-<style>
-head{
-}
-body {
-	margin: 0;
-	padding: 0;
-	
-}
-
-.menulist {
-	margin: 0;
-	padding: 0;
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-}
-
-.menu {
-	float: left;
-	cursor: pointer;
-	text-decoration: none;
-	/* 	display: inline-block; */
-	text-align: center;
-	background-color: #ededed;
-	width: 12.4%;
-	height: 20%;
-	margin-left:0.1%;
-	padding:0;
-	display: block;
-	position: relative;
-	z-index: 3;
-}
-.menu:hover{
-background-color: #c6c6c6
-}
-.menu .hide {
-	display: none;
-	background-color: #c6c6c6;
-	text-align: center;
-	z-index: 2;
-	position: relative; 
-	margin : 0;
-	padding: 0;
-	margin: 0;
-}
-
-.lmenu {
-	background: #D4F4FA;
-	cursor: pointer;
-	width: 12%;
-	float:left;
-	position: absolute;
-	height: 100%;
-	padding: 0;
-	margin: 0;
-	text-align:center;
-	z-index: 2;
-	 justify-content: space-between;
-}
-.lmenu>li:hover{
-background-color: #00D8FF;
-}
-.lmenu>li {
-	background: #ffffff;
-	text-align: center;
-	margin-top: 10%;
-	width:100%;
-	padding :0;
-}
-.lmenu .lhide{
-display: none;
-position: absolute;
-text-align:center;
-background-color: #00D8FF;
-width: 90%;
-margin-left:100%;
-margin-top:-10%;
-float:right;
-z-index: 3;
-
-
-}
-table, th, td {
-	border: 1px solid #bcbcbc;
-}
-
-table {
-	background-color: aqua;
-	width: 80%;
-	position: relative;
-}
-
-.page {
-	width: 88%;
-	height: 80%;
-	margin-left:12%;
-	position : absolute;
-	z-index: 1;
-}
-
-.button {
-	height: 100%;
-	position: relative;
-}
-
-.div {
-	margin: 0;
-	padding: 0;
-	margin-right: 12%;
-}
-
-.button {
-	display: flex;
-	position: relative;
-	justify-content: center;
-	text-align: center;
-	align-content: center;
-}
-
-#footer {
-	text-align: center; 
-	position : absolute;
-	background-color: red;
-	width: 100%;
-	height: 20%;
-	margin-right: 12%;
-	margin-top: 25%;
-}
-</style>
-
-
-</div>
 </head>
 <body>
 
-	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+
 	<div style="text-align: center">
 		<span id="nowtimestring">현재시간<br></span> <span id="nowtime">00
 			: 00 : 00</span>
@@ -184,208 +51,196 @@ table {
 					<li><a>menu2-sub5</a></li>
 					<li><a>menu2-sub6</a></li>
 				</ul></li>
-			<li class="menu"><a href="http://www.naver.com" style="text-decoration: none;color:black;">menu3</a></li>
-			<li class="menu"><a >menu4</a></li>
-			<li class="menu"><a href="http://www.daum.net" style="text-decoration: none;color:black;">menu5</a></li>
+			<li class="menu"><a href="http://www.naver.com"
+				style="text-decoration: none; color: black;">menu3</a></li>
+			<li class="menu"><a>menu4</a></li>
+			<li class="menu"><a href="http://www.daum.net"
+				style="text-decoration: none; color: black;">menu5</a></li>
 			<li class="menu">menu6</li>
 			<li class="menu"><a>menu7</a></li>
 			<li class="menu"><a>menu8</a></li>
 
 		</ul>
-		<br> <br> <br>
-		<div >
+		<div class="mainbody">
 			<ul class="lmenu" style="list-style-type: none">
 				<li onclick="pageset(0)"><a>page1</a></li>
 				<li onclick="pageset(1)"><a>page2</a></li>
 				<li onclick="pageset(2)"><a>page3</a></li>
 				<li onclick="dolDisplay(0)"><a>lmenu4</a>
-				<ul class="lhide" style="list-style-type: none">
+					<ul class="lhide" style="list-style-type: none">
 
-					<li ><a>menu1-sub1</a></li>
-					<li style="margin-top: 5px"><a>menu1-sub2</a></li>
-					<li style="margin-top: 5px"><a>menu1-sub3</a></li>
-					<li style="margin-top: 5px"><a>menu1-sub4</a></li>
-					<li style="margin-top: 5px"><a>menu1-sub5</a></li>
-					<li style="margin-top: 5px"><a>menu1-sub6</a></li>
+						<li><a>menu1-sub1</a></li>
+						<li style="margin-top: 5px"><a>menu1-sub2</a></li>
+						<li style="margin-top: 5px"><a>menu1-sub3</a></li>
+						<li style="margin-top: 5px"><a>menu1-sub4</a></li>
+						<li style="margin-top: 5px"><a>menu1-sub5</a></li>
+						<li style="margin-top: 5px"><a>menu1-sub6</a></li>
 
-				</ul></li>
+					</ul></li>
 				<li onclick="dolDisplay(1)"><a>lmenu5</a>
-				<ul class="lhide" style="list-style-type: none">
+					<ul class="lhide" style="list-style-type: none">
 
-					<li ><a>menu2-sub1</a></li>
-					<li style="margin-top: 5px"><a>menu2-sub2</a></li>
-					<li style="margin-top: 5px"><a>menu2-sub3</a></li>
-					<li style="margin-top: 5px"><a>menu2-sub4</a></li>
-					<li style="margin-top: 5px"><a>menu2-sub5</a></li>
-					<li style="margin-top: 5px"><a>menu2-sub6</a></li>
+						<li><a>menu2-sub1</a></li>
+						<li style="margin-top: 5px"><a>menu2-sub2</a></li>
+						<li style="margin-top: 5px"><a>menu2-sub3</a></li>
+						<li style="margin-top: 5px"><a>menu2-sub4</a></li>
+						<li style="margin-top: 5px"><a>menu2-sub5</a></li>
+						<li style="margin-top: 5px"><a>menu2-sub6</a></li>
 
-				</ul></li>
+					</ul></li>
 				<li><a>lmenu6</a></li>
 			</ul>
+
+			<section class="page" style="display: block">
+				<table style="margin-left: auto; margin-right: auto;">
+
+					<!-- <caption>page1</caption> -->
+					<thead>
+						<tr>
+							<th>이름</th>
+							<th>성별</th>
+							<th>나이</th>
+							<th>국적</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>김승영
+							<td>남자</td>
+							<td>29</td>
+							<td>대한민국</td>
+						</tr>
+						<tr>
+							<td>신승연</td>
+							<td>여자</td>
+							<td>27</td>
+							<td>대한민국</td>
+						</tr>
+						<tr>
+							<td>Teddy</td>
+
+							<td>남자</td>
+							<td>25</td>
+							<td>미국</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="2">Table Foot</td>
+							<td>dd</td>
+
+							<td><input type="text" name="text" id="input" size="20"></input>
+
+
+								<button onclick="view()">전송</button>
+						</tr>
+
+					</tfoot>
+
+				</table>
+				<br> <br>
+				<div class="div" align="center">
+					<button class="button" onclick="view()"
+						style="vertical-align: bottom;">전송</button>
+				</div>
+			</section>
+			<section class="page" style="display: none;">
+				<table style="margin-left: auto; margin-right: auto;">
+
+					<!-- <caption>page1</caption> -->
+					<thead>
+						<tr>
+							<th>품목</th>
+							<th>제조일</th>
+							<th>종류</th>
+							<th>제조사</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>아이폰x10</td>
+							<td>18-10-11</td>
+							<td>핸드폰</td>
+							<td>애플</td>
+						</tr>
+						<tr>
+							<td>갤럭시s10</td>
+							<td>19-04-01</td>
+							<td>핸드폰</td>
+							<td>삼성</td>
+						</tr>
+						<tr>
+							<td>플레이스테이션4</td>
+							<td>18-04-04</td>
+							<td>콘솔게임기</td>
+							<td>소니</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="2">Table Foot</td>
+							<td>dd</td>
+
+							<td><select name="newSkill" id="newSkill">
+									<option value="1">A skill</option>
+									<option value="2">Another skill</option>
+									<option value="3">Yet another skill</option>
+							</select>
+								<button onclick="dropdownview()">확인</button></td>
+						</tr>
+
+					</tfoot>
+				</table>
+			</section>
+			<section class="page" style="display: none;">
+				<table style="margin-left: auto; margin-right: auto;">
+
+					<!-- <caption>page1</caption> -->
+					<thead>
+						<tr>
+							<th>사명</th>
+							<th>설립일</th>
+							<th>분류</th>
+							<th>국적</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>애플</td>
+							<td>00-01-04</td>
+							<td>IT</td>
+							<td>미국</td>
+						</tr>
+						<tr>
+							<td>소니</td>
+							<td>01-01-03</td>
+							<td>IT.게임</td>
+							<td>일본</td>
+						</tr>
+						<tr>
+							<td>삼성전자</td>
+							<td>01-01-05</td>
+							<td>IT</td>
+							<td>대한민국</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="2">Table Foot</td>
+							<td>dd</td>
+
+							<td><input type="text" name="text" size="20"></td>
+						</tr>
+
+					</tfoot>
+				</table>
+			</section>
+
+
+
+
+
 		</div>
-		<section class="page" style="display: block">
-			<table style="margin-left: auto; margin-right: auto;">
-
-				<!-- <caption>page1</caption> -->
-				<thead>
-					<tr>
-						<th>이름</th>
-						<td>성별
-						</th>
-						<td>나이
-						</th>
-						<td>국적
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>김승영
-						</th>
-						<td>남자</td>
-						<td>29</td>
-						<td>대한민국</td>
-					</tr>
-					<tr>
-						<td>신승연</td>
-						<td>여자</td>
-						<td>27</td>
-						<td>대한민국</td>
-					</tr>
-					<tr>
-						<td>Teddy
-						</th>
-						<td>남자</td>
-						<td>25</td>
-						<td>미국</td>
-					</tr>
-				</tbody>
-				<tfoot>
-					<tr>
-						<td colspan="2">Table Foot</td>
-						<td>dd</td>
-
-						<td><input type="text" name="text" id="input" size="20"></input>
-
-
-							<button onclick="view()">전송</button>
-					</tr>
-
-				</tfoot>
-
-			</table>
-			<br> <br>
-			<div class="div" align="center">
-				<button class="button" onclick="view()"
-					style="vertical-align: bottom;">전송</button>
-			</div>
-		</section>
-		<section class="page" style="display: none;">
-			<table style="margin-left: auto; margin-right: auto;">
-
-				<!-- <caption>page1</caption> -->
-				<thead>
-					<tr>
-						<th>품목</th>
-						<td>제조일
-						</th>
-						<td>종류
-						</th>
-						<td>제조사
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>아이폰x10
-						</th>
-						<td>18-10-11</td>
-						<td>핸드폰</td>
-						<td>애플</td>
-					</tr>
-					<tr>
-						<td>갤럭시s10</td>
-						<td>19-04-01</td>
-						<td>핸드폰</td>
-						<td>삼성</td>
-					</tr>
-					<tr>
-						<td>플레이스테이션4
-						</th>
-						<td>18-04-04</td>
-						<td>콘솔게임기</td>
-						<td>소니</td>
-					</tr>
-				</tbody>
-				<tfoot>
-					<tr>
-						<td colspan="2">Table Foot</td>
-						<td>dd</td>
-
-						<td><select name="newSkill" id="newSkill">
-								<option value="1">A skill</option>
-								<option value="2">Another skill</option>
-								<option value="3">Yet another skill</option>
-						</select>
-						<button onclick="dropdownview()">확인</button></td>
-					</tr>
-
-				</tfoot>
-			</table>
-		</section>
-		<section class="page" style="display: none;">
-			<table style="margin-left: auto; margin-right: auto;">
-
-				<!-- <caption>page1</caption> -->
-				<thead>
-					<tr>
-						<th>사명</th>
-						<td>설립일
-						</th>
-						<td>분류
-						</th>
-						<td>국적
-						</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>애플
-						</th>
-						<td>00-01-04</td>
-						<td>IT</td>
-						<td>미국</td>
-					</tr>
-					<tr>
-						<td>소니</td>
-						<td>01-01-03</td>
-						<td>IT.게임</td>
-						<td>일본</td>
-					</tr>
-					<tr>
-						<td>삼성전자
-						</th>
-						<td>01-01-05</td>
-						<td>IT</td>
-						<td>대한민국</td>
-					</tr>
-				</tbody>
-				<tfoot>
-					<tr>
-						<td colspan="2">Table Foot</td>
-						<td>dd</td>
-
-						<td><input type="text" name="text" size="20"></td>
-					</tr>
-
-				</tfoot>
-			</table>
-		</section>
-
-
-		<br>
-
-
 	</div>
 	<section>
 		<footer id="footer" data-role="footer">
