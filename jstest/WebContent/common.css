@@ -1,0 +1,12 @@
+@charset "UTF-8";
+ul{
+	margin: 0;
+	padding: 0;
+}
+body {
+min-width: 640px;
+width: 1366px;
+height: 768px;
+margin: 0;
+	padding: 0;
+}
