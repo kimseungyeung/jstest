@@ -12,7 +12,7 @@
 	margin: 0;
 	padding: 0;
 	position: relative;
-	z-index: 1;
+	z-index: 3;
 	}
 .topmenu>li{
 	float:left;
@@ -51,6 +51,7 @@
 	width:136px;
 	margin:0;
 	padding:0;
+	z-index: 2
 }
 .leftmenu>li{
 	margin-top: 10%;
@@ -67,7 +68,14 @@
 	height: 500px;
 	margin 0;
 	padding 0;
-		position: relative;
-
+	margin-left:10%;
+	position: relative;
+	z-index: 1;
+	background-image: url('ddd.png');
+	background-size: 430px 440px ;
+	background-repeat: no-repeat;
+	background-position: center;
+	
 	}
+
 

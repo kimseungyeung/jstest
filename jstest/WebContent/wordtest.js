@@ -348,14 +348,23 @@ for (var name in keywords) {
     data.push({
         name: name,
         value: Math.sqrt(keywords[name])
+        
     })
 }
 var maskImage = new Image();
-
+var thisname;
 var option = {
-    series: [ {
+		 /*title: {
+		        text: 'Google Trends',
+		        link: 'http://www.google.com/trends/hottrends'
+		    },*/
+		    /*tooltip: {
+		    	show: true
+		    	
+		    },*/
+		series: [ {
         type: 'wordCloud',
-        sizeRange: [10, 100],
+        sizeRange: [10, 120],
         rotationRange: [-90, 90],
         rotationStep: 45,
         gridSize: 2,
@@ -370,8 +379,13 @@ var option = {
                         Math.round(Math.random() * 160)
                     ].join(',') + ')';
                 }
+            }, emphasis: {
+                shadowBlur: 10,
+                shadowColor: '#fff'
             }
         },
+        width: "80%",
+        height: "84%",
         data: data.sort(function (a, b) {
             return b.value  - a.value;
         })
@@ -383,4 +397,9 @@ maskImage.onload = function () {
     chart.setOption(option);
 }
 
-maskImage.src = 'logo.png';
+maskImage.src = 'ddd.png';
+chart.on('click', function (params) {
+	   console.log(params); // do whatever you want with another chart say chartTwo here
+	   
+	   alert(params.name);
+	});
