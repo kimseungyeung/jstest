@@ -69,7 +69,7 @@
 	margin 0;
 	padding 0;
 	margin-left:10%;
-	position: relative;
+	position: absolute;
 	z-index: 1;
 	background-image: url('ddd.png');
 	background-size: 430px 440px ;

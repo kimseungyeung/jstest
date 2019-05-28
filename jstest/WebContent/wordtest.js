@@ -385,7 +385,7 @@ var option = {
             }
         },
         width: "80%",
-        height: "84%",
+        height: "86%",
         data: data.sort(function (a, b) {
             return b.value  - a.value;
         })
@@ -401,5 +401,23 @@ maskImage.src = 'ddd.png';
 chart.on('click', function (params) {
 	   console.log(params); // do whatever you want with another chart say chartTwo here
 	   
-	   alert(params.name);
+	  // alert(params.name);
+	   showPopup(params.name);
 	});
+
+
+
+
+	 function showPopup(n) { 
+
+	var	 openWin=	 window.open("popup1.html?name="+n, "a", "width=500, height=700, left=100, top=50, resizable=no");
+	 //alert(n);
+		 var value =n;
+	 openWin.document.getElementById("input1").value = value;
+	 }
+	
+	 
+
+
+
+
